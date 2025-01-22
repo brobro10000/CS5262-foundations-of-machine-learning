@@ -4,6 +4,8 @@
 
 The Adult Income Dataset can be used to evaluate and optimize sales lead targeting by predicting whether an individual earns more than $50K annually. This classification task allows businesses to allocate resources more effectively by identifying high-value to potentially lead to higher revenue per sale. Along with that, if we look a bit broader in terms of social affairs, government programs can be focused more on individuals at high risk of falling below the needed income level for sustainance (or are already below that), and allow those individuals to stay financially afloat. That is a big benefit as it is much harder to build up credit and rent history after defaults, late payments, evictions, etc. have already happened.
 
+The following analysis will be done on a hypothetical scenario of using our predictive model to determine the viability of sales leads. We will determine if the lead is from individual who makes greater then $50,000 and potential cost benefit of a set of 1000 leads.
+
 ### Classification Outcomes and Associated Costs/Benefits
 
 The outcomes of the classification model can be interpreted as follows:
@@ -55,7 +57,7 @@ To determine the hypothetical sales impact of 1000 leads, we sum up all values f
 
 We've determined based on our predictive model and 1000 leads, we can isolate which variables to maximize and minimize to return the most benefit financially based on our model. Based on our cost benefit analysis, we've determined that increasing the true positive value (sensitivity) and decreasing false negatives will have the largest impacts, while false positives and true negatives cancel each other out. But, reducing false positives will increase the overall precision of our model, so it cannot be ignored in this scenario.
 
-### In summary:
+### Performance Metric Summary
 
 To maximize sales impact, we can optimize our model performance and thus improve overall revenue by:
 - **Increasing Precision:** Reducing false positives to avoid wasting resources on low-value leads.
@@ -63,7 +65,16 @@ To maximize sales impact, we can optimize our model performance and thus improve
 - **Increasing Recall:** Reducing false negatives to ensure fewer high-value leads are missed.
   - Recall = TP / (TP + FN)
 
-#Comments by Peer Reviewer:
-Excellent work! I honestly had a very hard time finding things to point out because the description was very thorough and the confusion matrix and all the calculations were very well thought out. I would say maybe add something regarding the broader use of this, like for example right now it is very heavily focused on business but maybe add how it can be used for governmental services that help people who are below a certain income level. I added something like this in one of your paragraphs above, just a start, you can see if it makes sense.
-Along with that, maybe inckude some background in the top of the README to let the reader know that we are imagining a sales type scenario and we are basing the FP FN and all the confusion matrix based on that because that was not apparent from the very start. Other than that, great job!
-#
+### Other applications
+
+Given access to a similar level of features to determine income information, we can generalize this model as a solution to apply to other business applications. Examples include banking and finance to determine if a credit limit request should be approved, non-profits and charitible distributions, and targeted marketing based on likelihood to purchase certain products.
+
+Its important to highlight, extending the use case for this model should always follow ethical guidelines and avoid bias and descrimination.
+
+## Comments by Peer Reviewer - Ismail Memon
+
+Excellent work!
+
+I honestly had a very hard time finding things to point out because the description was very thorough and the confusion matrix and all the calculations were very well thought out. I would say maybe add something regarding the broader use of this, like for example right now it is very heavily focused on business but maybe add how it can be used for governmental services that help people who are below a certain income level. I added something like this in one of your paragraphs above, just a start, you can see if it makes sense.
+
+Along with that, maybe include some background in the top of the README to let the reader know that we are imagining a sales type scenario and we are basing the FP FN and all the confusion matrix based on that because that was not apparent from the very start. Other than that, great job!
